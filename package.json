@@ -1,8 +1,8 @@
 {
   "name": "react-9-slice",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/react9Slice.jsx",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -16,9 +16,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Alex Bardanov <dnbard@gmail.com>",
+  "license": "MIT"
 }
