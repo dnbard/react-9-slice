@@ -14,25 +14,29 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
     const MINUS_BORDER = -border;
     const SCALE_X = width / (IMAGE_SIZE_MINUS_BORDER);
     const SCALE_Y = height / (IMAGE_SIZE_MINUS_BORDER);
-    
+    const ABSOLUTE = 'absolute';
+    const RELATIVE = 'relative';
 
-    return <div className="r9s" style={{ lineHeight: 0, width: width + border * 2, height: height + border * 2, position: 'relative' }}>
-        <div style={{ position: 'relative' }}>
+    return <div className="r9s" style={{ lineHeight: 0, width: width + border * 2, height: height + border * 2, position: RELATIVE }}>
+        <div style={{ position: RELATIVE }}>
             <div className="r9s-nw" style={ Object.assign({}, BASE_STYLE) }></div>
             <div className="r9s-n" style={ Object.assign({}, BASE_STYLE, {
                 width: IMAGE_SIZE_MINUS_BORDER,
                 transformOrigin: 'left',
                 transform: `scaleX(${SCALE_X})`,
-                backgroundPositionX: MINUS_BORDER
+                backgroundPositionX: MINUS_BORDER,
+                position: ABSOLUTE,
+                left: border,
+                top: 0
             }) }></div>
             <div className="r9s-ne" style={ Object.assign({}, BASE_STYLE, {
                 backgroundPositionX: IMAGE_SIZE_AND_BORDER,
-                position: 'absolute',
+                position: ABSOLUTE,
                 top: 0,
                 left: BORDER_AND_WIDTH
             }) }></div>
         </div>
-        <div style={{ position: 'relative', height, width }}>
+        <div style={{ position: RELATIVE, height, width: width + border * 2 }}>
             <div className="r9s-w" style={ Object.assign({}, BASE_STYLE, {
                 height: IMAGE_SIZE_MINUS_BORDER,
                 backgroundPositionY: MINUS_BORDER,
@@ -47,20 +51,23 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
                 transform: `scaleX(${SCALE_X}) scaleY(${SCALE_Y})`,
                 transformOrigin: 'left top',
                 backgroundPositionX: MINUS_BORDER,
-                backgroundPositionY: MINUS_BORDER
+                backgroundPositionY: MINUS_BORDER,
+                position: ABSOLUTE,
+                left: border,
+                top: 0
             }) }></div>
             <div className="r9s-e" style={ Object.assign({}, BASE_STYLE, {
                 height: IMAGE_SIZE_MINUS_BORDER,
                 backgroundPositionX: IMAGE_SIZE_AND_BORDER,
                 backgroundPositionY: MINUS_BORDER,
-                position: 'absolute',
+                position: ABSOLUTE,
                 top: 0,
                 left: BORDER_AND_WIDTH,
                 transformOrigin: 'left top',
                 transform: `scaleY(${SCALE_Y})`
             }) }></div>
             <div className="r9-content" style={ Object.assign({}, {
-                position: 'absolute',
+                position: ABSOLUTE,
                 top: 0,
                 left: border,
                 width,
@@ -73,7 +80,7 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
                 { children }
             </div>
         </div>
-        <div style={{ position: 'absolute', top: height + border }}>
+        <div style={{ position: ABSOLUTE, top: height + border }}>
             <div className="r9s-sw" style={ Object.assign({}, BASE_STYLE, {
                 backgroundPositionY: IMAGE_SIZE_AND_BORDER
             }) }></div>
@@ -82,12 +89,15 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
                 transformOrigin: 'left',
                 transform: `scaleX(${SCALE_X})`,
                 backgroundPositionX: MINUS_BORDER,
-                backgroundPositionY: IMAGE_SIZE_AND_BORDER
+                backgroundPositionY: IMAGE_SIZE_AND_BORDER,
+                position: ABSOLUTE,
+                left: border,
+                top: 0
             }) }></div>
             <div className="r9s-se" style={ Object.assign({}, BASE_STYLE, {
                 backgroundPositionX: IMAGE_SIZE_AND_BORDER,
                 backgroundPositionY: IMAGE_SIZE_AND_BORDER,
-                position: 'absolute',
+                position: ABSOLUTE,
                 top: 0,
                 left: BORDER_AND_WIDTH
             }) }></div>
