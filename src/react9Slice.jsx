@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function React9Slice({ image, border=8, width=128, height=128, children, imageSize, style }){
     const BASE_STYLE = {
@@ -104,3 +105,13 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
         </div>
     </div>;
 }
+
+React9Slice.propTypes = {
+    image: PropTypes.string.isRequired,
+    border: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    children: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
+    imageSize: PropTypes.number.isRequired,
+    style: PropTypes.object
+};

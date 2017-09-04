@@ -1,20 +1,27 @@
 {
   "name": "react-9-slice",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "src/react9Slice.jsx",
   "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^2.30.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "prop-types": "^15.5.10"
+  },
   "scripts": {
     "start": "webpack-dev-server"
   },
