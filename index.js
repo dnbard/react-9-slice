@@ -15,12 +15,10 @@ class Main extends Component{
 
     render(){
         return <div>
-            <React9Slice width={ this.state.width } height={ this.state.height } border={ 52 } image="./src/sprite.png" imageSize={ 525 } style={{
+            <React9Slice width={ this.state.width } height={ this.state.height } border={ 85 } image="./src/9slice.png" imageSize={{ x: 516, y: 423 }} style={{
                 color: 'white'
-            }}>
-                HELLO WORLD
-            </React9Slice>
-            <div>Width: <input value={ this.state.width } onChange={(e) => this.setState({ width: parseInt(e.target.value) }) } /></div>
+            }}>HELLO WORLD</React9Slice>
+            <div style={{ marginTop: 16 }}>Width: <input value={ this.state.width } onChange={(e) => this.setState({ width: parseInt(e.target.value) }) } /></div>
             <div>Height: <input value={ this.state.height } onChange={(e) => this.setState({ height: parseInt(e.target.value) }) } /></div>
         </div>;
     }
