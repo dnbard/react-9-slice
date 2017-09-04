@@ -1,0 +1,5 @@
+.gitignore
+images/*
+src/*.png
+index.html
+index.js
