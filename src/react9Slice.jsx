@@ -6,7 +6,8 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
         width: border,
         height: border,
         display: 'inline-flex',
-        backgroundImage: image ? `url(${image})`: undefined
+        backgroundImage: image ? `url(${image})`: undefined,
+        imageRendering: 'pixelated'
     };
 
     const IMAGE_X_SIZE_MINUS_BORDER = imageSize.x - border * 2;
@@ -114,6 +115,9 @@ React9Slice.propTypes = {
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     children: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
-    imageSize: PropTypes.object.isRequired,
+    imageSize: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired
+    }).isRequired,
     style: PropTypes.object
 };

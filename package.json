@@ -1,6 +1,6 @@
 {
   "name": "react-9-slice",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "src/react9Slice.jsx",
   "dependencies": {
