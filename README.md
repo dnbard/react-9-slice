@@ -2,7 +2,7 @@
 
 ![logo](https://github.com/dnbard/react-9-slice/blob/master/images/logo.png?raw=true)
 
-React library to create [9-slice image](http://rwillustrator.blogspot.com/2007/04/understanding-9-slice-scaling.html) surfaces.
+React library to create [9-slice image](http://rwillustrator.blogspot.com/2007/04/understanding-9-slice-scaling.html) surfaces. Check [the demo](https://dnbard.github.io/react-9-slice/)!
 
 ## Install
 
