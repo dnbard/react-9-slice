@@ -72,14 +72,13 @@ export default function React9Slice({ image, border=8, width=128, height=128, ch
             }) }></div>
             <div className="r9-content" style={ Object.assign({}, {
                 position: ABSOLUTE,
-                top: 0,
+                top: border * 0.5,
                 left: border,
                 width,
                 height,
-                overflow: 'auto',
                 zIndex: 10,
-                padding: '10px 4px',
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                lineHeight: 1.39
             }, style)}>
                 { children }
             </div>
